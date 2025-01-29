@@ -8,6 +8,8 @@
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../my-element.js"></script>
     <script type="module" src="../beep-messages.js"></script>
+    <script type="module" src="../write-message.js"></script>
+
     <style>
       p {
         border: solid 1px blue;
@@ -15,8 +17,14 @@
       }
     </style>
   </head>
-  <body>
-    <beep-message></beep-message>
 
+  <body>
+    <wrapper>
+      <beep-message content="Mon message 1"></beep-message>
+      <beep-message content="Mon message 2"></beep-message>
+      <beep-message content="Mon message 3"></beep-message>
+      <beep-message content="Mon message 4"></beep-message>
+    </wrapper>
   </body>
+  <write-message></write-message>
 </html>
