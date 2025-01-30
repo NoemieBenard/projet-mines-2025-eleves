@@ -87,7 +87,7 @@ const messages: Message[] = [
           ${this._messagesTask.render({
             initial: () => html`<p>Waiting to start task</p>`,
             pending: () => html`<p>Running task...</p>`,
-            complete: (messages) => html`
+            complete: (messages: any[]) => html`
               ${messages.map(
                 (message) => html`
                   <beep-message
@@ -100,7 +100,7 @@ const messages: Message[] = [
                 `
               )}
             `,
-            error: (error: Error) => html`<p>Oops, something went wrong: ${error}</p>`
+            error: (error) => html`<p>Oops, something went wrong: ${error}</p>`
           })}
         `;
       }

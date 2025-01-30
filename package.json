@@ -42,6 +42,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@kor-ui/kor": "^1.11.3",
+    "@lit/task": "^1.0.2",
     "date-fns": "^4.1.0",
     "lit": "^3.2.1"
   },
