@@ -7,24 +7,46 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../my-element.js"></script>
-    <script type="module" src="../beep-messages.js"></script>
+    <script type="module" src="../beep-message-list.js"></script>
     <script type="module" src="../write-message.js"></script>
+    <script type="module" src="../beep-header.js"></script>
+    <script type="module" src="../wrapper.js"></script>
+    <link rel="stylesheet" type="text/css" href="../node_modules/@kor-ui/kor/kor-styles.css"/>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       p {
         border: solid 1px blue;
         padding: 8px;
       }
+
+      main {
+        flex: 1 1 auto; 
+        padding: 1rem;
+        overflow-y: auto; 
+      }
+
+      body {
+          display: flex;
+          flex-direction: column;
+          height: 100vh; 
+      }
+
     </style>
   </head>
 
   <body>
-    <wrapper>
-      <beep-message content="Hello world"></beep-message>
-      <beep-message content="Mon message 2"></beep-message>
-      <beep-message content="Mon message 3"></beep-message>
-      <beep-message content="Mon message 4"></beep-message>
-    </wrapper>
+    <beep-header></beep-header>
+    <main>
+      <wrapper>
+        <beep-message-list></beep-message-list>
+      </wrapper>
+    </main>
+  
   </body>
   <write-message></write-message>
 </html>
